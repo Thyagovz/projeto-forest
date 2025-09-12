@@ -610,10 +610,6 @@ video {
   display: block;
 }
 
-.inline {
-  display: inline;
-}
-
 .flex {
   display: flex;
 }
@@ -627,8 +623,20 @@ video {
   height: 0.5rem;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .divide-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -642,16 +650,17 @@ video {
   border-color: rgb(22 40 31 / var(--tw-divide-opacity, 1));
 }
 
-.rounded {
-  border-radius: 0.25rem;
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded-md {
   border-radius: 0.375rem;
 }
 
-.rounded-full {
-  border-radius: 9999px;
+.bg-verde-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(145 238 119 / var(--tw-bg-opacity, 1));
 }
 
 .bg-verde-800 {
@@ -664,11 +673,6 @@ video {
   background-color: rgb(15 28 21 / var(--tw-bg-opacity, 1));
 }
 
-.bg-verde-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(145 238 119 / var(--tw-bg-opacity, 1));
-}
-
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -679,8 +683,18 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .font-sans {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .capitalize {
@@ -690,6 +704,19 @@ video {
 .text-verde-300 {
   --tw-text-opacity: 1;
   color: rgb(145 238 119 / var(--tw-text-opacity, 1));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
+.hover\:underline-offset-8:hover {
+  text-underline-offset: 8px;
 }
 
 @media (min-width: 768px) {
