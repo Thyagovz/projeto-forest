@@ -12,6 +12,10 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["DM Sans", "system-ui", " sans-serif"],
+        serif: ["DM Sans Text", "Georgia", "serif"],
+      },
       keyframes: {
         slideIn: {
           "0%": {

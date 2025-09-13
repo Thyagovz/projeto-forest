@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/favicon.png" type="image/png" />
     <link rel="stylesheet" href="./output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text&display=swap"
+      rel="stylesheet"
+    />
     <title>Forest</title>
   </head>
   <body class="bg-verde-800 font-sans">
@@ -36,7 +42,7 @@
           <li class="animate-slide-in opacity-0 animate-1">
             <a
               class="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 lg:hover:underline lg:hover:underline-offset-8"
-              href="#accommodation"
+              href="#accomodation"
               >Acomodações</a
             >
           </li>
@@ -83,18 +89,12 @@
       <div
         class="relative px-8 pb-8 pt-64 sm:pt-64 bg-gradient-to-t from-verde-950/80 text-white rounded-2xl overflow-hidden max-sm:px-4 max-sm:pt-12"
       >
-        <img
-          class="absolute inset-0 size-full object-cover -z-10"
-          src="./img/floresta.jpg"
-          width="2400"
-          height="1200"
-          alt=""
-        />
         <video
           id="video"
           class="absolute inset-0 size-full object-cover -z-10 animate-fade-in"
           muted
           playsinline
+          autoplay
           loop
           width="1280"
           height="720"
@@ -140,7 +140,7 @@
     </main>
 
     <section
-      id="Accommodation"
+      id="accommodation"
       class="radial-gradient container grid lg:grid-cols-[2fr_3fr] gap-8 mb-12 sm:mb-16 pt-16"
     >
       <div
@@ -519,7 +519,7 @@
 
     <section class="container mb12 sm:mb-16">
       <ul
-        class="flex flex-col items-center py-4 divide-y-2 max-sm:divide-verde-900 *:p-4 sm:flex-row sm:gap-8 sm:border-b-2 sm:border-t-2 sm:border-verde-900 sm:py-8 *:*:max-h-8"
+        class="flex flex-col items-center justify-center py-4 divide-y-2 max-sm:divide-verde-900 *:p-4 sm:flex-row sm:gap-8 sm:border-b-2 sm:border-t-2 sm:border-verde-900 sm:py-8 *:*:max-h-8"
       >
         <li><img src="./img/parceiros/caravan.svg" alt="Caravan" /></li>
         <li><img src="./img/parceiros/dogs.svg" alt="Dogs" /></li>
