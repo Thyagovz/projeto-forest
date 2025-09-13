@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <header class="container flex justify-between gap-8 py-8">
+    <header class="container flex items-center justify-between gap-8 py-8">
       <a href="./">
         <img src="./img/forest.svg" alt="Forest" />
       </a>
@@ -30,35 +30,35 @@
         class="lg:block hidden items-center z-40 max-lg:fixed max-lg:w-full max-lg:inset-0"
       >
         <div
-          class="fixed inset-0 bg-verde-950/40 backdrop:backdrop-blur-md"
+          class="fixed lg:hidden inset-0 bg-verde-950/40 backdrop-blur-md"
         ></div>
         <ul
-          class="text-white max-lg:divide-y-2 max-lg:divide-white/10 max-lg:z-50 max-lg:absolute max-lg:p-8 max-lg:w-full lg:text-xl lg:lex lg:flex-wrap lg:gap-8"
+          class="text-white text-2xl max-lg:divide-y-2 max-lg:divide-white/10 max-lg:z-50 max-lg:absolute max-lg:p-8 max-lg:w-full lg:text-xl lg:flex lg:flex-wrap lg:gap-8"
         >
           <li class="animate-slide-in opacity-0 animate-1">
             <a
-              class="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 hover:underline hover:underline-offset-8"
+              class="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 lg:hover:underline lg:hover:underline-offset-8"
               href="#accommodation"
               >Acomodações</a
             >
           </li>
           <li class="animate-slide-in opacity-0 animate-2">
             <a
-              class="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 hover:underline hover:underline-offset-8"
+              class="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 lg:hover:underline lg:hover:underline-offset-8"
               href="#events"
               >Eventos</a
             >
           </li>
           <li class="animate-slide-in opacity-0 animate-3">
             <a
-              class="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 hover:underline hover:underline-offset-8"
+              class="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 lg:hover:underline lg:hover:underline-offset-8"
               href="#experiences"
               >Experiências</a
             >
           </li>
           <li class="animate-slide-in opacity-0 animate-4">
             <a
-              class="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 hover:underline hover:underline-offset-8"
+              class="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 lg:hover:underline lg:hover:underline-offset-8"
               href="#contact"
               >Contato</a
             >
@@ -92,6 +92,17 @@
           height="1200"
           alt=""
         />
+        <video
+          id="video"
+          class="absolute inset-0 size-full object-cover -z-10 animate-fade-in"
+          muted
+          
+          playsinline
+          loop
+          width="1280"
+          height="720"
+          src="./img/video_chuva.mp4"
+        ></video>
         <div
           class="bg-verde-950/60 rounded-xl flex flex-col items-start gap-2 p-4 mb-8 sm:gap-8 sm:items-center sm:py-1 sm:pl-4 sm:pr-1 sm:rounded-full sm:inline-flex sm:flex-row sm:bg-verde-950"
         >
@@ -574,6 +585,24 @@
     </footer>
 
     <script>
+      const video = document.getElementById("video");
+      const temperature = document.getElementById("temperature");
+      const time = document.getElementById("time");
+      const day = document.getElementById("day");
+
+      const random = Math.floor(Math.random() * 10) + 20;
+      temperature.innerText = `${random}º`;
+      time.innerText = random < 25 ? `🌦️ ${random + 5}%` : `🌤️`;
+
+      const date = new Date();
+      day.innerText = date
+        .toLocaleDateString("pt-BR", {
+          weekday: "long",
+        })
+        .replace("-feira", "");
+
+      video.src = random < 25 ? `./img/video_chuva.mp4` : `./img/video_sol.mp4`;
+
       const mobileButton = document.getElementById("mobile-button");
       const mobileMenu = document.getElementById("mobile-menu");
 
