@@ -32,9 +32,9 @@ Opções rápidas:
 
 - Basta abrir [src/index.html](src/index.html) no navegador.
 
-2. Servir localmente (recomendado para desenvolvimento)
+2. Servir localmente (para desenvolvimento)
 
-- Se houver um script ou dependências em [package.json](package.json), execute:
+- Script ou dependências em [package.json](package.json), execute:
   - Instalar dependências:
     ```sh
     npm install
